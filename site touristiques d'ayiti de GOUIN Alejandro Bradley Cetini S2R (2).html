@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sites Touristiques d'Ayiti</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: bande drapeau en haut, grand titre, grille de six sites, pied de page. */
+:root{
+  --bleu:#00209f; --rouge:#d21034;
+  --bg:#f6f7fb; --fg:#101830; --muted:#4a5573; --card:#ffffff; --line:#d8dcea;
+  --on-band:#ffffff;
+  --display:'Bricolage Grotesque','Arial Black',Arial,sans-serif;
+  --body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0b1020;--fg:#eef1fb;--muted:#a9b3d1;--card:#141b33;--line:#27325a;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0b1020;--fg:#eef1fb;--muted:#a9b3d1;--card:#141b33;--line:#27325a;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;margin:0}
+*{box-sizing:border-box}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{background:var(--bleu);color:var(--on-band);border-bottom:10px solid var(--rouge)}
+header .wrap{padding-block:48px 40px}
+.eyebrow{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;opacity:.85;margin:0 0 12px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,7vw,4.6rem);line-height:1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1 span{color:#ffd3db}
+.lead{max-width:60ch;margin:20px 0 0;font-size:1.15rem}
+.motto{display:inline-block;margin-top:24px;padding:6px 14px;border:2px solid var(--on-band);font-family:var(--display);font-weight:600;letter-spacing:.08em}
+nav{display:flex;flex-wrap:wrap;gap:8px 20px;padding-block:18px}
+nav a{color:var(--fg);font-weight:600;text-decoration:none;border-bottom:2px solid var(--rouge)}
+nav a:hover,nav a:focus-visible{color:var(--rouge);outline:none}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,4vw,2.4rem);margin:8px 0 24px;display:flex;align-items:center;gap:14px}
+h2::before{content:"";width:34px;height:14px;background:linear-gradient(var(--bleu) 50%,var(--rouge) 50%);flex:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:24px;padding-bottom:56px}
+article{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;min-width:0}
+.art{display:block;width:100%;height:auto;aspect-ratio:16/10}
+.body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px}
+.tag{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rouge)}
+h3{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0}
+.meta{color:var(--muted);font-size:.95rem}
+.band{background:var(--card);border-block:1px solid var(--line)}
+.band .wrap{padding-block:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:28px}
+.band h4{font-family:var(--display);margin:0 0 6px;font-size:1.15rem}
+footer{background:var(--rouge);color:#fff}
+footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer p{max-width:70ch}
+.photo-btn{align-self:flex-start;margin-top:8px;font:600 .9rem var(--body);color:var(--bleu);background:transparent;border:2px solid var(--bleu);padding:6px 12px;cursor:pointer}
+.photo-btn:hover,.photo-btn:focus-visible{background:var(--bleu);color:#fff;outline:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .photo-btn{color:#9db4ff;border-color:#9db4ff}:root:not([data-theme="light"]) .photo-btn:hover{background:#9db4ff;color:#0b1020}}
+:root[data-theme="dark"] .photo-btn{color:#9db4ff;border-color:#9db4ff}
+:root[data-theme="dark"] .photo-btn:hover{background:#9db4ff;color:#0b1020}
+img.art{object-fit:cover}
+@media (prefers-reduced-motion:no-preference){article{transition:transform .2s}article:hover{transform:translateY(-4px)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Ayiti · Perle des Antilles</p>
+    <h1>LES SITES TOURISTIQUES D'<span>AYITI</span></h1>
+    <p class="lead">Forteresses de pierre, cascades turquoise, plages de la côte nord et villes d'art : six lieux à découvrir dans le premier pays noir indépendant du monde.</p>
+    <p class="motto">L'UNION FAIT LA FORCE</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav aria-label="Sites">
+    <a href="#citadelle">Citadelle</a><a href="#sans-souci">Sans-Souci</a><a href="#bassin-bleu">Bassin Bleu</a><a href="#labadee">Labadee</a><a href="#saut-deau">Saut-d'Eau</a><a href="#ile-a-vache">Île-à-Vache</a>
+  </nav>
+  <h2>Six lieux à ne pas manquer</h2>
+
+  <div class="grid">
+    <article id="citadelle">
+      <svg class="art" viewBox="0 0 320 200" role="img" aria-label="Illustration de la Citadelle Laferrière au sommet d'une montagne">
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fb2ff"/><stop offset="1" stop-color="#ffe3c4"/></linearGradient></defs>
+        <rect width="320" height="200" fill="url(#g1)"/>
+        <path d="M0 200V120l60-30 50 20 70-60 70 50 70-20v120z" fill="#2f6b4a"/>
+        <path d="M0 200V150l90-30 90-40 140 50v70z" fill="#1f4d36"/>
+        <path d="M120 112l40-34 70 8-10 34z" fill="#8a7f72"/>
+        <path d="M130 112l30-26 60 6-6 20z" fill="#a89c8c"/>
+        <rect x="165" y="70" width="6" height="16" fill="#6e655a"/>
+        <rect x="28" y="22" width="40" height="26" fill="#00209f"/><rect x="28" y="35" width="40" height="13" fill="#d21034"/>
+      </svg>
+      <div class="body"><span class="tag">Milot · Nord</span><h3>Citadelle Laferrière</h3>
+      <p>Forteresse bâtie au début du XIXe siècle sous Henri Christophe, perchée à plus de 900 mètres. Classée au patrimoine mondial de l'UNESCO en 1982.</p>
+      <p class="meta">Montée à pied ou à cheval depuis le village de Milot.</p></div>
+    </article>
+
+    <article id="sans-souci">
+      <svg class="art" viewBox="0 0 320 200" role="img" aria-label="Illustration des ruines du palais Sans-Souci">
+        <defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ec9ff"/><stop offset="1" stop-color="#f6e2c4"/></linearGradient></defs>
+        <rect width="320" height="200" fill="url(#g2)"/>
+        <rect y="160" width="320" height="40" fill="#3f7d4f"/>
+        <path d="M40 160V70h240v90h-30v-60a20 20 0 0 0-40 0v60h-30v-60a20 20 0 0 0-40 0v60h-30v-60a20 20 0 0 0-40 0v60z" fill="#c9a98a"/>
+        <path d="M40 70h60l-10-16H40zM220 70h60V54h-50z" fill="#b08968"/>
+        <rect x="270" y="30" width="30" height="20" fill="#00209f"/><rect x="270" y="40" width="30" height="10" fill="#d21034"/>
+      </svg>
+      <div class="body"><span class="tag">Milot · Nord</span><h3>Palais Sans-Souci</h3>
+      <p>Résidence royale d'Henri Christophe, construite entre 1810 et 1813. Les ruines, marquées par le séisme de 1842, se visitent au pied de la Citadelle.</p>
+      <p class="meta">Se visite avec la Citadelle, au cours de la même journée.</p></div>
+    </article>
+
+    <article id="bassin-bleu">
+      <svg class="art" viewBox="0 0 320 200" role="img" aria-label="Illustration des bassins bleus près de Jacmel">
+        <defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f8f5b"/><stop offset="1" stop-color="#1f5a3c"/></linearGradient></defs>
+        <rect width="320" height="200" fill="url(#g3)"/>
+        <path d="M150 0h26l6 70h-38z" fill="#e8f6ff" opacity=".9"/>
+        <ellipse cx="160" cy="92" rx="70" ry="16" fill="#00a3d9"/>
+        <ellipse cx="120" cy="140" rx="86" ry="20" fill="#0a7fd1"/>
+        <ellipse cx="215" cy="178" rx="90" ry="18" fill="#0057b8"/>
+        <path d="M0 200V150l40-10 30 20-10 40zM250 200l30-30 40 8v22z" fill="#6b5d4f"/>
+      </svg>
+      <div class="body"><span class="tag">Jacmel · Sud-Est</span><h3>Bassin Bleu</h3>
+      <p>Série de vasques naturelles aux eaux bleu cobalt, reliées par des cascades dans un cadre de verdure. Baignade et petite marche d'approche.</p>
+      <p class="meta">Idéal à combiner avec une visite de la ville de Jacmel.</p></div>
+    </article>
+
+    <article id="labadee">
+      <svg class="art" viewBox="0 0 320 200" role="img" aria-label="Illustration d'une plage avec palmiers à Labadee">
+        <defs><linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fb7ff"/><stop offset="1" stop-color="#d6f0ff"/></linearGradient></defs>
+        <rect width="320" height="120" fill="url(#g4)"/>
+        <circle cx="260" cy="40" r="20" fill="#ffd54a"/>
+        <rect y="100" width="320" height="50" fill="#00a6c8"/>
+        <rect y="125" width="320" height="25" fill="#35c4d8"/>
+        <path d="M0 200v-60q80-18 160-6t160-14v80z" fill="#f2d9a6"/>
+        <path d="M70 190q4-50 12-80" stroke="#6b4a2b" stroke-width="5" fill="none"/>
+        <path d="M82 110q-30-4-44 14M82 110q-4-30 20-34M82 110q22-14 44-2M82 110q18 8 28 28" stroke="#2c8a4b" stroke-width="6" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div class="body"><span class="tag">Côte nord</span><h3>Labadee</h3>
+      <p>Presqu'île de la côte nord, à proximité de Cap-Haïtien, bordée de plages abritées et d'eaux calmes, connue pour ses activités balnéaires.</p>
+      <p class="meta">Cap-Haïtien et son centre historique sont tout proches.</p></div>
+    </article>
+
+    <article id="saut-deau">
+      <svg class="art" viewBox="0 0 320 200" role="img" aria-label="Illustration de la cascade de Saut-d'Eau">
+        <rect width="320" height="200" fill="#bfe3c9"/>
+        <path d="M0 0h110l-10 90 -30 110H0zM210 0h110v200H250l-30-110z" fill="#2c7a45"/>
+        <path d="M110 0h100l-6 150h-88z" fill="#2c7a45"/>
+        <path d="M128 0h64l-4 150h-56z" fill="#f4fbff"/>
+        <path d="M140 0v150M160 0v150M178 0v150" stroke="#cfe9f7" stroke-width="3"/>
+        <ellipse cx="160" cy="170" rx="80" ry="20" fill="#7cc6e6"/>
+      </svg>
+      <div class="body"><span class="tag">Ville-Bonheur · Centre</span><h3>Saut-d'Eau</h3>
+      <p>Chute d'eau réputée près de Ville-Bonheur, lieu de pèlerinage très fréquenté chaque année à la mi-juillet.</p>
+      <p class="meta">La période du pèlerinage attire de nombreux visiteurs.</p></div>
+    </article>
+
+    <article id="ile-a-vache">
+      <svg class="art" viewBox="0 0 320 200" role="img" aria-label="Illustration de l'Île-à-Vache avec un bateau de pêche">
+        <defs><linearGradient id="g6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fd0ff"/><stop offset="1" stop-color="#e9f7ff"/></linearGradient></defs>
+        <rect width="320" height="200" fill="url(#g6)"/>
+        <rect y="110" width="320" height="90" fill="#0aa5c4"/>
+        <path d="M30 124q60-30 130-12t130 12z" fill="#f2d9a6"/>
+        <path d="M70 124q40-26 90-12" fill="#3d9a58"/>
+        <path d="M150 124q4-36 12-52" stroke="#6b4a2b" stroke-width="4" fill="none"/>
+        <path d="M162 72q-24-2-34 12M162 72q0-24 20-26M162 72q20-10 36 2" stroke="#2c8a4b" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M200 168h70l-10 14h-50z" fill="#d21034"/><path d="M235 168v-34l20 30z" fill="#fff"/><rect x="233" y="132" width="3" height="36" fill="#00209f"/>
+      </svg>
+      <div class="body"><span class="tag">Les Cayes · Sud</span><h3>Île-à-Vache</h3>
+      <p>Île du sud du pays, à quelques minutes de bateau des Cayes, où se mêlent plages calmes, villages de pêcheurs et ambiance tranquille.</p>
+      <p class="meta">Accès en bateau depuis Les Cayes.</p></div>
+    </article>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <div><h4>Byenvini nan Ayiti</h4><p>« Bienvenue en Haïti » en kreyòl, la langue que parlent tous les Haïtiens. Le français est aussi langue officielle.</p></div>
+    <div><h4>Avant de partir</h4><p>Consultez les conseils aux voyageurs de votre pays et renseignez-vous localement sur la sécurité et les routes avant chaque déplacement.</p></div>
+    <div><h4>Meilleure saison</h4><p>La saison sèche, de décembre à mars environ, offre le temps le plus stable pour la randonnée et la plage.</p></div>
+  </div>
+</section>
+
+<script>
+(function(){
+  function put(card, url){
+    var old = card.querySelector('.art');
+    var img = document.createElement('img');
+    img.className = 'art';
+    img.alt = 'Photo : ' + card.querySelector('h3').textContent;
+    img.src = url;
+    old.replaceWith(img);
+  }
+  document.querySelectorAll('article').forEach(function(card){
+    var key = 'ayiti-photo-' + card.id;
+    try { var saved = localStorage.getItem(key); if (saved) put(card, saved); } catch(e){}
+    var input = document.createElement('input');
+    input.type = 'file'; input.accept = 'image/*'; input.hidden = true; input.id = 'file-' + card.id;
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'photo-btn'; btn.textContent = 'Ajouter ma photo';
+    btn.addEventListener('click', function(){ input.click(); });
+    input.addEventListener('change', function(){
+      var f = input.files && input.files[0];
+      if (!f) return;
+      var reader = new FileReader();
+      reader.onload = function(){
+        var im = new Image();
+        im.onload = function(){
+          var max = 1000, s = Math.min(1, max / Math.max(im.width, im.height));
+          var c = document.createElement('canvas');
+          c.width = Math.round(im.width * s); c.height = Math.round(im.height * s);
+          c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+          var url = c.toDataURL('image/jpeg', 0.82);
+          put(card, url);
+          try { localStorage.setItem(key, url); } catch(e){}
+        };
+        im.src = reader.result;
+      };
+      reader.readAsDataURL(f);
+    });
+    var body = card.querySelector('.body');
+    body.appendChild(btn); body.appendChild(input);
+  });
+})();
+</script>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Ayiti</strong> · Premier pays noir indépendant du monde, depuis le 1er janvier 1804.</p>
+    <p>Illustrations originales. Les photos réelles peuvent remplacer chaque image.</p>
+  </div>
+</footer>
+</body>
+</html>
